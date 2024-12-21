@@ -25,6 +25,7 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
+
 ## Использование:
 
 1. Перейдите на страницу в вашем веб-браузере:
