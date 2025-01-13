@@ -1,0 +1,54 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 8,
+    "fields": {
+      "name": "Django REST Framework расширение",
+      "description": "Плагин для улучшения работы с Django REST Framework, включая дополнительные функции и утилиты.",
+      "image": "django.png",
+      "category": 5,
+      "price": "39.99",
+      "created_at": "2025-01-12T20:26:53.405Z",
+      "updated_at": "2025-01-12T20:26:53.406Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 10,
+    "fields": {
+      "name": "Скрипт для автоматизации задач",
+      "description": "Простой скрипт для автоматизации рутинных задач с использованием Python.",
+      "image": "scripts.png",
+      "category": 6,
+      "price": "9.99",
+      "created_at": "2025-01-12T20:16:51.980Z",
+      "updated_at": "2025-01-12T20:16:51.980Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 11,
+    "fields": {
+      "name": "Парсер для веб-сайтов",
+      "description": "Плагин для парсинга данных с веб-сайтов, позволяет собирать информацию из различных источников.",
+      "image": "parser.png",
+      "category": 6,
+      "price": "24.99",
+      "created_at": "2025-01-12T20:17:10.344Z",
+      "updated_at": "2025-01-12T20:17:10.344Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 12,
+    "fields": {
+      "name": "Анализ данных в Pandas",
+      "description": "Пример кода для анализа данных с помощью библиотеки Pandas, включает основные операции и методы.",
+      "image": "pandas",
+      "category": 7,
+      "price": "15.99",
+      "created_at": "2025-01-12T20:17:18.661Z",
+      "updated_at": "2025-01-12T20:17:18.661Z"
+    }
+  }
+]
