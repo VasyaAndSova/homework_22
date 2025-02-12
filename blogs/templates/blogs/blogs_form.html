@@ -1,0 +1,24 @@
+{% extends 'blogs/base.html' %}
+{% block content %}
+<div class="row mb-2">
+    <div class="col-md-12">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm mb-4">
+
+            <form method="post" class="p-3" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+                <div class="card-body">
+            <div class="d-flex gap-2 align-items-end">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <a href="{% if object %}{% url 'blogs:blogs_delete' object.pk %}{% else %}{% url 'blogs:blogs' %}{% endif %}" class="btn btn-danger">
+       Удалить
+   </a>
+                </div>
+        </div>
+                </form>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

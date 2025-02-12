@@ -1,0 +1,29 @@
+{% extends 'blogs/base.html' %}
+{% load my_tags %}
+
+{% block content %}
+<div class="row mb-2">
+    <div class="col-md-12">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm">
+            <div class="col p-4 d-flex flex-column position-static">
+                <h3 class="mb-0">{{ object.header }}</h3>
+                <div class="mb-1 text-body-secondary">{{ object.created_at }}</div>
+                <p class="card-text mb-auto">{{ object.content }}</p>
+                <div class="d-flex gap-2 align-items-end">
+                    <a href="{% url 'blogs:blogs' %}" class="icon-link gap-1 icon-link-hover">
+                        Назад
+                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                    </a>
+                    <a href="{% url 'blogs:blogs_update' object.pk %}" class="icon-link gap-1 icon-link-hover">
+                        Редактировать
+                        <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="{{ object.preview | media_filter }}" alt="" class="bd-placeholder-img" width="200" height="250">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

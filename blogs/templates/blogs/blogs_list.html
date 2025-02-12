@@ -1,0 +1,33 @@
+{% extends 'blogs/base.html' %}
+{% load my_tags %}
+
+{% block content %}
+<div class="container">
+    <div class="row mb-2">
+        {% for blog in object_list %}
+            <div class="col-md-6 mb-4">  <!-- Каждая карточка занимает половину ширины -->
+                <div class="row g-0 border rounded overflow-hidden flex-md-row shadow-sm h-100 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <h3 class="mb-0">{{ blog.header }}</h3>
+                        <div class="mb-1 text-body-secondary">{{ blog.created_at }}</div>
+                        <p class="card-text mb-auto">{{ blog.content | slice:"100" }}...</p>
+                        <a href="{% url 'blogs:blogs_detail' blog.pk %}" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Открыть
+                            <svg class="bi"><use xlink:href="#chevron-right"/></svg>
+                        </a>
+                        <div id="view-counter">
+                            <img src="https://img.icons8.com/ios7/600w/FFFFFF/visible.png" alt="Глаз" width="20" height="20">
+                            <span id="count">{{ blog.views_count }}</span>
+                        </div>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="{{ blog.preview | media_filter }}" alt="" class="bd-placeholder-img" width="200" height="250">
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
