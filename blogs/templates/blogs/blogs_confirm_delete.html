@@ -6,16 +6,15 @@
         <div class="col p-4 d-flex flex-column position-static">
             <p class="card-text mb-auto">Вы действительно хотите удалить: "{{ object.header }}"?</p>
             <div class="d-flex gap-2 align-items-end">
-<form method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Подтвердить</button>
-    <a href="{% url 'blogs:blogs_detail' object.pk %}" class="btn btn-primary">Отменить</a>
-</form>
-                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Подтвердить</button>
+                    <a href="{% url 'blogs:blogs_detail' object.pk %}" class="btn btn-primary">Отменить</a>
+                </form>
+            </div>
         </div>
-
-      </div>
+        </div>
     </div>
-  </div>
+</div>
 
 {% endblock %}
